@@ -1,13 +1,8 @@
 import React, { useState } from 'react';
 import {
-  AppBar,
-  Toolbar,
-  Typography,
   Box,
-  IconButton,
   TextField,
   Button,
-  Grid,
   Table,
   TableBody,
   TableCell,
@@ -16,9 +11,9 @@ import {
   TableRow,
   Paper,
   InputAdornment,
+  Typography,
 } from '@mui/material';
 import {
-  Menu as MenuIcon,
   Add as AddIcon,
   Search as SearchIcon,
 } from '@mui/icons-material';
@@ -44,49 +39,39 @@ function RoleManagement() {
 
   return (
     <div>
-      {/* AppBar */}
-      <AppBar position="sticky" sx={{ backgroundColor: '#333' }}>
-        <Toolbar>
-          <IconButton color="inherit" edge="start" sx={{ mr: 2 }}>
-            <MenuIcon />
-          </IconButton>
-          <Typography variant="h6" sx={{ flexGrow: 1, fontSize: '1.5rem' }}>
-            Role Management
-          </Typography>
-        </Toolbar>
-      </AppBar>
-
       {/* Main Content Area */}
-      <Box sx={{ padding: '16px', backgroundColor: '#f4f4f4', height: '100vh' }}>
-        {/* Header with Search and Add Role Button */}
-        <Grid container spacing={2} alignItems="center" sx={{ marginBottom: 3 }}>
-          <Grid item xs={12} sm={8}>
-            <TextField
-              fullWidth
-              label="Search Role"
-              variant="outlined"
-              value={searchQuery}
-              onChange={(e) => setSearchQuery(e.target.value)}
-              InputProps={{
-                startAdornment: (
-                  <InputAdornment position="start">
-                    <SearchIcon />
-                  </InputAdornment>
-                ),
-              }}
-            />
-          </Grid>
-          <Grid item xs={12} sm={4} sx={{ display: 'flex', justifyContent: 'flex-end' }}>
-            <Button
-              variant="contained"
-              color="primary"
-              startIcon={<AddIcon />}
-              onClick={() => console.log('Add Role Clicked')}
-            >
-              Add Role
-            </Button>
-          </Grid>
-        </Grid>
+      <Box sx={{ padding: '16px', backgroundColor: '#f4f4f4', minHeight: '100vh' }}>
+        <Box
+          sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' ,  marginBottom: 3, }}
+          
+        >
+            <Typography variant='h6'>
+                Role Management
+            </Typography>
+          <TextField 
+             placeholder='Search Person '
+            label="Search Role"
+            variant="outlined"
+            value={searchQuery}
+            onChange={(e) => setSearchQuery(e.target.value)}
+            sx={{ width:'400px', marginRight: 2 }}
+            InputProps={{
+              startAdornment: (
+                <InputAdornment position="start">
+                  <SearchIcon />
+                </InputAdornment>
+              ),
+            }}
+          />
+          <Button
+            variant="contained"
+            color="primary"
+            startIcon={<AddIcon />}
+            onClick={() => console.log('Add Role Clicked')}
+          >
+            Add Role
+          </Button>
+        </Box>
 
         {/* Table for Roles */}
         <TableContainer component={Paper}>
