@@ -9,8 +9,9 @@ import {
   Typography,
   InputAdornment,
   Grid,
+  Badge
 } from '@mui/material';
-import { Search as SearchIcon, Visibility as VisibilityIcon } from '@mui/icons-material';
+import { Search as SearchIcon,  ArrowUpward as ArrowUpwardIcon } from '@mui/icons-material';
 import ReactSpeedometer from 'react-speedometer';
 
 function ViewAllTickets() {
@@ -80,14 +81,16 @@ function ViewAllTickets() {
                 </Typography>
               </CardContent>
               <CardActions>
-                <Button
-                  variant="outlined"
-                  color="primary"
-                  startIcon={<VisibilityIcon />}
-                  sx={{ marginLeft: 'auto' }}
-                >
-                  View
-                </Button>
+                {/* Show responses count with an upward arrow */}
+                <Box sx={{ display: 'flex', alignItems: 'center', marginLeft: 'auto' }}>
+                  <Badge
+                    badgeContent={ticket.responses}
+                    color="primary"
+                    sx={{ marginRight: 1 }}
+                  >
+                    <ArrowUpwardIcon color={ticket.responses > 0 ? 'primary' : 'disabled'} />
+                  </Badge>
+                </Box>
               </CardActions>
 
               {/* Position Speedometer at the bottom left */}
