@@ -21,7 +21,7 @@ import {
 function RoleManagement() {
   const [searchQuery, setSearchQuery] = useState('');
 
-  // Dummy data for roles
+
   const roles = [
     { id: 1, roleName: 'Admin', transaction: 'Full Access', accessLevel: 'High' },
     { id: 2, roleName: 'Manager', transaction: 'Limited Access', accessLevel: 'Medium' },
@@ -32,14 +32,13 @@ function RoleManagement() {
     { id: 7, roleName: 'Support', transaction: 'Read/Write', accessLevel: 'Medium' },
   ];
 
-  // Filtered roles based on search query
+  
   const filteredRoles = roles.filter((role) =>
     role.roleName.toLowerCase().includes(searchQuery.toLowerCase())
   );
 
   return (
     <div>
-      {/* Main Content Area */}
       <Box sx={{ padding: '16px', backgroundColor: '#f4f4f4', minHeight: '100vh' }}>
         <Box
           sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' ,  marginBottom: 3, }}
@@ -73,7 +72,7 @@ function RoleManagement() {
           </Button>
         </Box>
 
-        {/* Table for Roles */}
+
         <TableContainer component={Paper}>
           <Table aria-label="roles table">
             <TableHead>
