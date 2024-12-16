@@ -3,6 +3,7 @@ import { AppBar, Toolbar, Typography, Box, Drawer, List, ListItem, ListItemText,
 , Card, CardContent, Grid 
  } from '@mui/material';
 import { Menu as MenuIcon, Notifications as NotificationsIcon , Dashboard as DashboardIcon ,People as PeopleIcon, Security as SecurityIcon, Settings as SettingsIcon, KeyboardArrowDown as KeyboardArrowDownIcon } from '@mui/icons-material';
+import TicketCard from './TicketCard';
 
 function Dashboard() {
   const [open, setOpen] = useState(false);
@@ -225,6 +226,9 @@ function Dashboard() {
               </TableBody>
             </Table>
           </TableContainer>
+          <Typography sx={{marginTop :'20px'}}>
+            <TicketCard/>
+          </Typography>
         </main>
       </Box>
     </div>
