@@ -5,6 +5,7 @@ import { Card, CardContent, CardHeader, Grid,
 import NearMeIcon from '@mui/icons-material/NearMe';
 import ModeEditOutlineIcon from '@mui/icons-material/ModeEditOutline';
 
+
 const tickets = [
   {
     "ticket_id": "TICKET001",
@@ -84,9 +85,8 @@ function TicketCard() {
             </Box>
               <Typography variant="body2">{ticket.location}</Typography>
             </CardContent>
-            <Box sx={{ display: 'flex', alignItems: 'center', padding: '16px' }}>
-              <NearMeIcon sx={{ marginRight: '8px' }} />
-              <Typography variant="body2">Add Comments</Typography>
+            <Box sx={{ display: 'flex', alignItems: 'center',justifyContent:'space-between', padding: '16px' }}>
+              <Typography variant="body2"> <NearMeIcon sx={{ marginRight: '8px' }} />Add Comments</Typography>
               <Typography variant='body2' sx={{marginRight:'200px'}}>CreatedBy: {ticket.created_by},{ticket.flat_no}</Typography>
             </Box>
            

@@ -4,14 +4,27 @@ import { Routes , Route } from "react-router-dom";
 import RoleManagement from "./components/RoleManagement";
 import AllTickets from "./components/AllTickets";
 import TicketCard from "./components/TicketCard";
+import VendorTable from "./components/VendorTable";
+import Layout from "./DashBoard/Layout";
+// import Sidebar from "./DashBoard/SideBar";
+import AppDashboard from "./DashBoard/AppDashboard";
+import ClientTable from "./Pages/ClientTable";
+// import SidebarWithAppBar from "./DashBoard/SidebarWithAppbar";
 function App() {
   return (
     <div className="App">
        <Routes>
-        <Route path="/" element={<Dashboard />} />
+        <Route path="/" element={<AppDashboard/>}>
+          <Route path="/vendor" element={<VendorTable/>}/>
+          <Route path="/client" element={<ClientTable/>}/>
+        </Route>
+        
+        <Route path="/ly" element ={<Layout/>}/>
+        <Route path="/dg" element={<Dashboard/>} />
         <Route path="/roles" element = {<RoleManagement/>}/>
         <Route path = '/tickets'element = {<AllTickets/>}/>
         <Route path="/card" element = {<TicketCard/>}/>
+        <Route path = "/vendor" element ={<VendorTable/>}/>
        </Routes>
     </div>
   );

@@ -2,16 +2,20 @@ import React, { useState } from 'react';
 import { AppBar, Toolbar, Typography, Box, Drawer, List, ListItem, ListItemText, ListItemIcon, IconButton, Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Paper, Select, MenuItem, InputLabel, FormControl
 , Card, CardContent, Grid 
  } from '@mui/material';
-import { Menu as MenuIcon, Notifications as NotificationsIcon , Dashboard as DashboardIcon ,People as PeopleIcon, Security as SecurityIcon, Settings as SettingsIcon, KeyboardArrowDown as KeyboardArrowDownIcon } from '@mui/icons-material';
+import { Menu as MenuIcon, Notifications as NotificationsIcon , Dashboard as DashboardIcon ,People as PeopleIcon, Security as SecurityIcon, Settings as SettingsIcon,
+   KeyboardArrowDown as KeyboardArrowDownIcon,  } from '@mui/icons-material';
+   import AssignmentIndIcon from '@mui/icons-material/AssignmentInd';
 import TicketCard from './TicketCard';
+import { Link } from 'react-router-dom';
 
-function Dashboard() {
+function Dashboard({onNavigate}) {
   const [open, setOpen] = useState(false);
   const [project, setProject] = useState('');
 
   const handleProjectChange = (event) => {
     setProject(event.target.value);
   };
+
   const rows = [
     { srNo: 1, customerName: 'John Doe', mobileNo: '123-456-7890', wingUnit: 'A1', registeredFamilyMembers: 4 },
     { srNo: 2, customerName: 'Jane Smith', mobileNo: '987-654-3210', wingUnit: 'B2', registeredFamilyMembers: 3 },
@@ -97,6 +101,19 @@ function Dashboard() {
             </ListItemIcon>
             <ListItemText primary="Role" />
           </ListItem>
+
+
+            <Link to={"/vendor"}>
+            
+            <ListItem button>
+             <ListItemIcon>
+               <AssignmentIndIcon sx={{ color: 'black' }} />
+            </ListItemIcon>
+             <ListItemText primary="Vendor Details" />
+          </ListItem>
+            
+            </Link>
+          
           <Box sx={{ marginTop: 'auto' }}>
           <List>
             <ListItem button>
