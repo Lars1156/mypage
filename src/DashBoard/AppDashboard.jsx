@@ -4,6 +4,7 @@ import { Box, CssBaseline, AppBar, Toolbar, Typography } from '@mui/material';
 import Sidebar from "./SideBar";
 function AppDashboard (){
     return (
+      <>
         <Box sx={{ display: 'flex' }}>
           <CssBaseline />
           <AppBar position="fixed" sx={{backgroundColor:'white'}}>
@@ -26,6 +27,7 @@ function AppDashboard (){
             <Outlet /> {/* Renders the nested route */}
           </Box>
         </Box>
+        </>
     )
 }
 

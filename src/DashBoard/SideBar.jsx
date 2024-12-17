@@ -24,7 +24,7 @@ import {Notifications as NotificationsIcon , Dashboard as DashboardIcon ,
             <ListItemText primary="Activity" />
           </ListItem>
         </List>
-        <ListItem button>
+        <ListItem button component={Link} to={'/'}>
             <ListItemIcon>
               <DashboardIcon sx={{ color: 'Black' }} />
             </ListItemIcon>
