@@ -27,10 +27,10 @@ function ClientTable (){
               <Card>
                 <CardContent>
                   <Typography variant="h6" gutterBottom>
-                    Card 1
+                    Possission Done
                   </Typography>
                   <Typography>
-                    Some content here for Card 1.
+                    2300
                   </Typography>
                 </CardContent>
               </Card>
@@ -39,10 +39,10 @@ function ClientTable (){
               <Card>
                 <CardContent>
                   <Typography variant="h6" gutterBottom>
-                    Card 2
+                    Possission Penading
                   </Typography>
                   <Typography>
-                    Some content here for Card 2.
+                    5100
                   </Typography>
                 </CardContent>
               </Card>
@@ -51,10 +51,10 @@ function ClientTable (){
               <Card>
                 <CardContent>
                   <Typography variant="h6" gutterBottom>
-                    Card 3
+                     Commerclals
                   </Typography>
                   <Typography>
-                    Some content here for Card 3.
+                   250
                   </Typography>
                 </CardContent>
               </Card>
@@ -63,10 +63,10 @@ function ClientTable (){
               <Card>
                 <CardContent>
                   <Typography variant="h6" gutterBottom>
-                    Card 4
+                    Office Spaces
                   </Typography>
                   <Typography>
-                    Some content here for Card 4.
+                    150
                   </Typography>
                 </CardContent>
               </Card>

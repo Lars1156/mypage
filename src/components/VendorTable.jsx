@@ -1,4 +1,4 @@
-import React from 'react';
+import React ,{useState}from 'react';
 import {
   Table,
   TableBody,
@@ -11,9 +11,13 @@ import {
   Typography,
   Card,
   CardContent,
+  FormControl,
+  InputLabel,
+  Select,
+  MenuItem
 
 } from '@mui/material';
-
+import { KeyboardArrowDown as KeyboardArrowDownIcon,} from '@mui/icons-material';   
 // Sample vendor data
 const vendorData = [
   {
@@ -79,6 +83,11 @@ const vendorData = [
 ];
 
 const VendorTable = () => {
+   const [project, setProject] = useState('');
+      
+        const handleProjectChange = (event) => {
+          setProject(event.target.value);
+        };
   return (
   <>
    <Grid container spacing={3} sx={{ marginBottom: 3 }}>
@@ -98,10 +107,10 @@ const VendorTable = () => {
               <Card>
                 <CardContent>
                   <Typography variant="h6" gutterBottom>
-                    Card 2
+                    Active Vendors
                   </Typography>
                   <Typography>
-                    Some content here for Card 2.
+                    1089
                   </Typography>
                 </CardContent>
               </Card>
@@ -110,10 +119,10 @@ const VendorTable = () => {
               <Card>
                 <CardContent>
                   <Typography variant="h6" gutterBottom>
-                    Card 3
+                    Disabled Vendors
                   </Typography>
                   <Typography>
-                    Some content here for Card 3.
+                     91
                   </Typography>
                 </CardContent>
               </Card>
@@ -122,15 +131,29 @@ const VendorTable = () => {
               <Card>
                 <CardContent>
                   <Typography variant="h6" gutterBottom>
-                    Card 4
+                    Performance
                   </Typography>
                   <Typography>
-                    Some content here for Card 4.
+                     231
                   </Typography>
                 </CardContent>
               </Card>
             </Grid>
           </Grid>
+          <FormControl fullWidth sx={{ marginBottom: 2 , height:40 , width:200 ,  marginLeft: 0 }}>
+            <InputLabel>Select Project</InputLabel>
+            <Select
+              value={project}
+              onChange={handleProjectChange}
+              label="Select Project"
+              IconComponent={KeyboardArrowDownIcon} // Set the dropdown icon
+            >
+              <MenuItem value={1}>Project A</MenuItem>
+              <MenuItem value={2}>Project B</MenuItem>
+              <MenuItem value={3}>Project C</MenuItem>
+              <MenuItem value={4}>Project D</MenuItem>
+            </Select>
+          </FormControl>
     <TableContainer component={Paper}>
       <Table>
         <TableHead>
