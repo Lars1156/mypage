@@ -6,7 +6,7 @@ function AppDashboard (){
     return (
         <Box sx={{ display: 'flex' }}>
           <CssBaseline />
-          <AppBar position="fixed">
+          <AppBar position="fixed" sx={{backgroundColor:'white'}}>
             <Toolbar>
               <Typography variant="h6" sx={{color:'black'}}>Dashboard</Typography>
             </Toolbar>

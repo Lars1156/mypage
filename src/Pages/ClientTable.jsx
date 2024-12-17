@@ -1,6 +1,6 @@
 import React , {useState} from "react";
 import { Box, Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Paper, Select, MenuItem, InputLabel, FormControl
-   } from '@mui/material';
+  , Grid, Typography,Card,CardContent } from '@mui/material';
 import { KeyboardArrowDown as KeyboardArrowDownIcon,} from '@mui/icons-material';   
 function ClientTable (){
     const [project, setProject] = useState('');
@@ -21,7 +21,58 @@ function ClientTable (){
         { srNo: 10, customerName: 'Henry Clark', mobileNo: '999-000-1111', wingUnit: 'J10', registeredFamilyMembers: 4 },
       ];
   return(
-    <Box>
+    <Box> 
+                <Grid container spacing={3} sx={{ marginBottom: 3 }}>
+            <Grid item xs={12} sm={6} md={3}>
+              <Card>
+                <CardContent>
+                  <Typography variant="h6" gutterBottom>
+                    Card 1
+                  </Typography>
+                  <Typography>
+                    Some content here for Card 1.
+                  </Typography>
+                </CardContent>
+              </Card>
+            </Grid>
+            <Grid item xs={12} sm={6} md={3}>
+              <Card>
+                <CardContent>
+                  <Typography variant="h6" gutterBottom>
+                    Card 2
+                  </Typography>
+                  <Typography>
+                    Some content here for Card 2.
+                  </Typography>
+                </CardContent>
+              </Card>
+            </Grid>
+            <Grid item xs={12} sm={6} md={3}>
+              <Card>
+                <CardContent>
+                  <Typography variant="h6" gutterBottom>
+                    Card 3
+                  </Typography>
+                  <Typography>
+                    Some content here for Card 3.
+                  </Typography>
+                </CardContent>
+              </Card>
+            </Grid>
+            <Grid item xs={12} sm={6} md={3}>
+              <Card>
+                <CardContent>
+                  <Typography variant="h6" gutterBottom>
+                    Card 4
+                  </Typography>
+                  <Typography>
+                    Some content here for Card 4.
+                  </Typography>
+                </CardContent>
+              </Card>
+            </Grid>
+          </Grid>
+
             <FormControl fullWidth sx={{ marginBottom: 2 , height:40 , width:200 ,  marginLeft: 0 }}>
             <InputLabel>Select Project</InputLabel>
             <Select

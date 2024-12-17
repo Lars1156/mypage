@@ -17,7 +17,7 @@ import {Notifications as NotificationsIcon , Dashboard as DashboardIcon ,
            </Typography>
         </Box>
         <List>
-          <ListItem button component={Link} to={'/activity'}>
+          <ListItem button component={Link} to={'/card'}>
             <ListItemIcon>
               <NotificationsIcon sx={{ color: 'black' }} />
             </ListItemIcon>

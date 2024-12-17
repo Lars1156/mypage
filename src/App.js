@@ -17,6 +17,7 @@ function App() {
         <Route path="/" element={<AppDashboard/>}>
           <Route path="/vendor" element={<VendorTable/>}/>
           <Route path="/client" element={<ClientTable/>}/>
+          <Route path="/card" element={<TicketCard/>}/>
         </Route>
         
         <Route path="/ly" element ={<Layout/>}/>

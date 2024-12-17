@@ -7,6 +7,11 @@ import {
   TableHead,
   TableRow,
   Paper,
+  Grid,
+  Typography,
+  Card,
+  CardContent,
+
 } from '@mui/material';
 
 // Sample vendor data
@@ -75,10 +80,62 @@ const vendorData = [
 
 const VendorTable = () => {
   return (
+  <>
+   <Grid container spacing={3} sx={{ marginBottom: 3 }}>
+            <Grid item xs={12} sm={6} md={3}>
+              <Card>
+                <CardContent>
+                  <Typography variant="h6" gutterBottom>
+                    All Vendor
+                  </Typography>
+                  <Typography>
+                    1200
+                  </Typography>
+                </CardContent>
+              </Card>
+            </Grid>
+            <Grid item xs={12} sm={6} md={3}>
+              <Card>
+                <CardContent>
+                  <Typography variant="h6" gutterBottom>
+                    Card 2
+                  </Typography>
+                  <Typography>
+                    Some content here for Card 2.
+                  </Typography>
+                </CardContent>
+              </Card>
+            </Grid>
+            <Grid item xs={12} sm={6} md={3}>
+              <Card>
+                <CardContent>
+                  <Typography variant="h6" gutterBottom>
+                    Card 3
+                  </Typography>
+                  <Typography>
+                    Some content here for Card 3.
+                  </Typography>
+                </CardContent>
+              </Card>
+            </Grid>
+            <Grid item xs={12} sm={6} md={3}>
+              <Card>
+                <CardContent>
+                  <Typography variant="h6" gutterBottom>
+                    Card 4
+                  </Typography>
+                  <Typography>
+                    Some content here for Card 4.
+                  </Typography>
+                </CardContent>
+              </Card>
+            </Grid>
+          </Grid>
     <TableContainer component={Paper}>
       <Table>
         <TableHead>
           <TableRow>
+            <TableCell><b>Sr. No</b></TableCell>
             <TableCell><b>Vendor Name</b></TableCell>
             <TableCell><b>Company Name</b></TableCell>
             <TableCell><b>Mobile No</b></TableCell>
@@ -88,6 +145,7 @@ const VendorTable = () => {
         <TableBody>
           {vendorData.map((vendor, index) => (
             <TableRow key={index}>
+              <TableCell>{index + 1}</TableCell> {/* Sr. No column */}
               <TableCell>{vendor.vendorName}</TableCell>
               <TableCell>{vendor.companyName}</TableCell>
               <TableCell>{vendor.mobileNo}</TableCell>
@@ -97,6 +155,7 @@ const VendorTable = () => {
         </TableBody>
       </Table>
     </TableContainer>
+    </>
   );
 };
 
