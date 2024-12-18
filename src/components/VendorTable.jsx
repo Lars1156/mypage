@@ -91,7 +91,7 @@ const VendorTable = () => {
   return (
   <>
    <Grid container spacing={3} sx={{ marginBottom: 3 }}>
-            <Grid item xs={12} sm={6} md={3}>
+            <Grid item xs={6} sm={6} md={3}>
               <Card>
                 <CardContent>
                   <Typography variant="h6" gutterBottom>
@@ -103,7 +103,7 @@ const VendorTable = () => {
                 </CardContent>
               </Card>
             </Grid>
-            <Grid item xs={12} sm={6} md={3}>
+            <Grid item xs={6} sm={6} md={3}>
               <Card>
                 <CardContent>
                   <Typography variant="h6" gutterBottom>
@@ -115,7 +115,7 @@ const VendorTable = () => {
                 </CardContent>
               </Card>
             </Grid>
-            <Grid item xs={12} sm={6} md={3}>
+            <Grid item xs={6} sm={6} md={3}>
               <Card>
                 <CardContent>
                   <Typography variant="h6" gutterBottom>
@@ -127,7 +127,7 @@ const VendorTable = () => {
                 </CardContent>
               </Card>
             </Grid>
-            <Grid item xs={12} sm={6} md={3}>
+            <Grid item xs={6} sm={6} md={3}>
               <Card>
                 <CardContent>
                   <Typography variant="h6" gutterBottom>

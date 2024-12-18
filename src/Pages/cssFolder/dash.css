@@ -1,0 +1,47 @@
+/* Dashboard.css */
+
+/* Mobile devices (max-width: 600px) */
+@media only screen and (max-width: 600px) {
+    .dashboard-container {
+      padding: 1rem;
+    }
+  
+    .dashboard-card {
+      margin-bottom: 1rem;
+    }
+  
+    .chart-container {
+      height: 250px;
+    }
+  }
+  
+  /* Tablets (min-width: 600px and max-width: 960px) */
+  @media only screen and (min-width: 600px) and (max-width: 960px) {
+    .dashboard-container {
+      padding: 1.5rem;
+    }
+  
+    .dashboard-card {
+      margin-bottom: 1.5rem;
+    }
+  
+    .chart-container {
+      height: 300px;
+    }
+  }
+  
+  /* Laptops and larger screens (min-width: 960px) */
+  @media only screen and (min-width: 960px) {
+    .dashboard-container {
+      padding: 2rem;
+    }
+  
+    .dashboard-card {
+      margin-bottom: 2rem;
+    }
+  
+    .chart-container {
+      height: 400px;
+    }
+  }
+  

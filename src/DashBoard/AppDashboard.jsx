@@ -1,16 +1,15 @@
 import React from "react";
 import { Outlet } from "react-router-dom";
-import { Box, CssBaseline, AppBar, Toolbar, Typography } from '@mui/material';
+import { Box, CssBaseline, AppBar, Typography , Toolbar } from '@mui/material';
 import Sidebar from "./SideBar";
 function AppDashboard (){
     return (
-      <>
         <Box sx={{ display: 'flex' }}>
           <CssBaseline />
           <AppBar position="fixed" sx={{backgroundColor:'white'}}>
-            <Toolbar>
-              <Typography variant="h6" sx={{color:'black'}}>Dashboard</Typography>
-            </Toolbar>
+            <Toolbar sx={{height:60}}>
+              <Typography variant="h6" sx={{color:'black', marginLeft:30,fontSize:'20px'}}>Dashboard/VendorDetails</Typography>
+              </Toolbar>
           </AppBar>
     
           <Sidebar />
@@ -27,7 +26,6 @@ function AppDashboard (){
             <Outlet /> {/* Renders the nested route */}
           </Box>
         </Box>
-        </>
     )
 }
 

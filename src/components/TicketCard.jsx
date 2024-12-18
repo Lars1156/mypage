@@ -59,7 +59,7 @@ function TicketCard() {
   return (
     <Grid container direction="column" spacing={3}>
       {tickets.map((ticket) => (
-        <Grid item xs={12} key={ticket.ticket_id}>
+        <Grid item xs={6} key={ticket.ticket_id}>
           <Card elevation={3} sx={{ width: '100%', height: 'auto' , borderRadius:'15px' }}>
             <CardHeader
               title={
