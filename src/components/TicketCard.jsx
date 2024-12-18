@@ -59,7 +59,7 @@ function TicketCard() {
   return (
     <Grid container direction="column" spacing={3}>
       {tickets.map((ticket) => (
-        <Grid item xs={6} key={ticket.ticket_id}>
+        <Grid item xs={12} key={ticket.ticket_id}>
           <Card elevation={3} sx={{ width: '100%', height: 'auto' , borderRadius:'15px' }}>
             <CardHeader
               title={
@@ -77,7 +77,7 @@ function TicketCard() {
               <Typography variant="body2" paragraph>
                 {ticket.issue}
               </Typography>
-              <Box sx={{ display: 'flex', justifyContent: 'flex-end', padding: '16px' }}>
+              <Box sx={{ display: 'flex', justifyContent: 'flex-end' }}>
               <Typography variant="body2" sx={{ fontWeight: 'bold'  }}>
                 Assignee: {ticket.assignee}
               </Typography>
@@ -85,9 +85,9 @@ function TicketCard() {
             </Box>
               <Typography variant="body2">{ticket.location}</Typography>
             </CardContent>
-            <Box sx={{ display: 'flex', alignItems: 'center',justifyContent:'space-between', padding: '16px' }}>
+            <Box sx={{ display: 'flex', alignItems: 'center',justifyContent:'space-between' }}>
               <Typography variant="body2"> <NearMeIcon sx={{ marginRight: '8px' }} />Add Comments</Typography>
-              <Typography variant='body2' sx={{marginRight:'200px'}}>CreatedBy: {ticket.created_by},{ticket.flat_no}</Typography>
+              <Typography variant='body2' sx={{}}>CreatedBy: {ticket.created_by},{ticket.flat_no}</Typography>
             </Box>
            
           </Card>

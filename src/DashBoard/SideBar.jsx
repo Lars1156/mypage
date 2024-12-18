@@ -111,7 +111,7 @@ function Sidebar() {
               <MenuIcon />
             </IconButton>
             <Typography variant="h6" noWrap sx={{color:'black'}}>
-              Dashboard
+              Help-Desk/Dashboard
             </Typography>
           </Toolbar>
         </AppBar>
